@@ -12,9 +12,16 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        def WB_LAAS_SERVER = "WB_LAAS_SERVER"
+        def WB_API_PROTOCOL = "WB_LAAS_PROTOCOL"
+        def WB_API_PORT = "WB_API_PORT"
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", WB_LAAS_SERVER, "\"127.0.0.1\""
+            buildConfigField "String", WB_API_PROTOCOL, "\"http://\""
+            buildConfigField "String", WB_API_PORT, "\":3000\""
         }
     }
 }
@@ -22,4 +29,9 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21+'
+    compile 'com.android.support:cardview-v7:21+'
+    compile 'com.android.support:palette-v7:21+'
+    compile 'com.android.support:support-v4:21+'
+    compile 'com.android.support:design:22.2.1'
 }

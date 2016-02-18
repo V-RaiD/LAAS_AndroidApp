@@ -3,6 +3,17 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/LAAS_PRIMARY</item>
+        <item name="colorPrimaryDark">@color/LAAS_PRIMARY_DARK</item>
+        <item name="colorAccent">@color/LAAS_ACCENT</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/LAAS_PRIMARY</item>
+        <item name="colorPrimaryDark">@color/LAAS_PRIMARY_DARK</item>
+        <item name="colorAccent">@color/LAAS_ACCENT</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>
