@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">WashBay.in</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_login">WashBay Login</string>
+    <string name="title_activity_signup">WashBay Signup</string>
+
+    <!-- MESSAGES FROM APP SIDE-->
+    <string name="network_error">No Network Found</string>
+    <string name="login_fail">Check Username/Password</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>

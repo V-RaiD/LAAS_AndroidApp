@@ -6,7 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import butterknife.ButterKnife;
+import butterknife.Bind;
+
+import com.benutzer.washbayin.activities.HomeActivity;
 import com.benutzer.washbayin.activities.LoginActivity;
+import com.benutzer.washbayin.utilities.CommonUtils;
+import com.benutzer.washbayin.utilities.LoginUtilities;
 
 /**
  * Created by amitesh on 18/2/16.
@@ -14,20 +20,23 @@ import com.benutzer.washbayin.activities.LoginActivity;
 public class SplashScreen extends AppCompatActivity {
     int trigger = 0;
     int timerStop = 0;
-    ImageView dynamoImageView;
     int[] listImagesSplash;
+
+    @Bind(R.id.laas_splashScreenDynamic) ImageView dynamoImageView;
+    @Bind(R.id.laas_SplashTag) ImageView dynamoImageViewSplashTag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher_screen);
 
+        ButterKnife.bind(this);
+
         listImagesSplash = new int[]{
-                R.drawable.icon_washbay_watery_iron_label,
-                R.drawable.icon_washbay_watery_dry_label,
-                R.drawable.icon_washbay_watery_all_label
+                R.drawable.icon_washbay_white_iconsiron,
+                R.drawable.icon_washbay_white_iconsdry,
+                R.drawable.icon_washbay_white_iconstag
         };
-        dynamoImageView = (ImageView) findViewById(R.id.laas_splashScreenDynamic);
 
         handleSplashTicker();
         handleSplashScreen();
@@ -44,15 +53,13 @@ public class SplashScreen extends AppCompatActivity {
                 dynamoImageView.setVisibility(View.VISIBLE);
                 trigger++;
                 if(trigger >= listImagesSplash.length){
-                    dynamoImageView = (ImageView) findViewById(R.id.laas_SplashTag);
-                    dynamoImageView.setVisibility(View.VISIBLE);
+                    dynamoImageViewSplashTag.setVisibility(View.VISIBLE);
                     return;
                 }
                 dynamoImageView.postDelayed(this, 500);
             }
         };
         dynamoImageView.postDelayed(runnable, 500);
-        System.out.println("Post Run trigger : " + trigger);
     }
 
     private void handleSplashScreen(){
@@ -60,12 +67,30 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    sleep(2000);
+                    if(!LoginUtilities.checkForLogin())
+                        sleep(2000);
+                    else{
+                        long timeStamp = System.currentTimeMillis();
+                        if(LoginUtilities.oldLogin())
+                        CommonUtils.loadInitialData();
+                        else {
+                            LoginUtilities.cleanSharedPref();
+                            if ((timeStamp + 2000) > System.currentTimeMillis()) {
+                                sleep((timeStamp + 2000) - System.currentTimeMillis());
+                            }
+                        }
+                    }
                 }catch (Exception ex){
 
                 }finally {
-                    Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
-                    startActivity(intent);
+                    if(!LoginUtilities.checkForLogin()){
+                        Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Intent intent =  new Intent(SplashScreen.this, HomeActivity.class);
+                        startActivity(intent);
+                    }
                 }
             }
         };
