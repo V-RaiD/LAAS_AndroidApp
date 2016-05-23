@@ -16,6 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.Bind;
 
 import com.benutzer.washbayin.R;
+import com.benutzer.washbayin.UserAPI.HomeActivity;
 import com.benutzer.washbayin.utilities.CommonUtils;
 import com.benutzer.washbayin.utilities.LoginUtilities;
 
@@ -27,12 +28,16 @@ public class LoginActivity extends AppCompatActivity {
     @Bind(R.id.passwordFieldLoginScreenId) EditText _passwordText;
     @Bind(R.id.loginButtonLoginScreenId) AppCompatButton _loginButton;
     @Bind(R.id.signupLinkOptionLoginScreen) TextView _signupLink;
+    LoginUtilities LoginUtilities;
+    CommonUtils commonUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
+        this.LoginUtilities = new LoginUtilities(this.getApplicationContext());
+        this.commonUtils = new CommonUtils(this.getApplicationContext());
         ButterKnife.bind(this);
 
         handleClicks();
@@ -68,13 +73,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginHandler(){
-        if(!CommonUtils.checkNetwork()){
+        if(!commonUtils.checkNetwork()){
             Toast.makeText(this, getResources().getString(R.string.network_error), Toast.LENGTH_SHORT).show();
         }
         else{
-            if(!LoginUtilities.validateUsername() || !LoginUtilities.intiateLogin(_usernameText.getText().toString(), _passwordText.getText().toString())){
+            if(!LoginUtilities.validateUsername(_usernameText.getText().toString()) ){
                 Toast.makeText(this, getResources().getString(R.string.login_fail), Toast.LENGTH_SHORT).show();
-            }
+            }/**/
             else{
                     handleDataLoading();
             }
@@ -91,7 +96,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    CommonUtils.loadInitialData();
+                    if(LoginUtilities.intiateLogin(_usernameText.getText().toString(), _passwordText.getText().toString()))
+                        commonUtils.loadInitialData();
                     progressDialog.dismiss();
                 }catch(Exception ex){
                     ex.printStackTrace();

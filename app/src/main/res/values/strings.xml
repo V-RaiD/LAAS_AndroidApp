@@ -4,10 +4,40 @@
     <string name="title_activity_login">WashBay Login</string>
     <string name="title_activity_signup">WashBay Signup</string>
 
+    <!-- SHARED PREFERENCES FILE NAME - AT : Auth token-->
+    <string name="shared_preference_file_washbay">com.benutzer.washbayin.SHARED_PREF_AT</string>
+    <string name="shared_pref_at">authToken</string>
     <!-- MESSAGES FROM APP SIDE-->
     <string name="network_error">No Network Found</string>
     <string name="login_fail">Check Username/Password</string>
+    <string name="invalid_email">Email Invalid!</string>
+    <string name="failed_signup">Failed to Register!</string>
+
+    <!-- LABELS-->
+    <string name="washingHomeLayoutText">Wash</string>
+    <string name="nextingTextHome">Book Your Laundry</string>
+    <string name="nextingTextSelect">Choose Order</string>
+
+    <!-- ACTIVITY MESSAGES-->
+    <string name="homeScreenLLOneText1">Washing and Ironing</string>
+    <string name="homeScreenLLOneText2">Offers and Discounts for today</string>
+    <string name="homeScreenLLTwoText1">Rate Card</string>
+    <string name="homeScreenLLTwoText2">Men - Women - Kids - Home</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_home">HomeActivity</string>
+
+    <!-- NAVIGATION DRAWER MESSAGES-->
+    <string name="navDrawerMenu">Menu</string>
+
+    <!-- NAVIGATION DRAWER LIST ITEM-->
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_price_list">PriceListActivity</string>
+    <string name="title_activity_service_home">ServiceHomeActivity</string>
+    <string name="title_activity_select_order">SelectOrderActivity</string>
+    <string name="title_activity_common_order">CommonOrder</string>
+    <string name="title_activity_selective">SelectiveActivity</string>
+    <string name="title_activity_bulk">BulkActivity</string>
 </resources>

@@ -3,6 +3,9 @@
     <color name="LAAS_WHITE">#ffffff</color>
     <color name="LAAS_HUE_BLUE">#11afff</color>
     <color name="LAAS_PRIMARY">#48afff</color>
+    <color name="LAAS_PRIMARY_CENTRE">#cc48afff</color>
+    <color name="LAAS_PRIMARY_CORNER">#9948afff</color>
     <color name="LAAS_PRIMARY_DARK">#318fff</color>
     <color name="LAAS_ACCENT">#1d2c5a</color>
+    <color name="LAAS_PRIMARY_CREAM">#a1bfff</color>
 </resources>
