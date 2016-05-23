@@ -1,8 +1,23 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/LAAS_PRIMARY</item>
+        <item name="colorPrimaryDark">@color/LAAS_PRIMARY_DARK</item>
+        <item name="colorAccent">@color/LAAS_ACCENT</item>
+        <item name="android:drawable">@drawable/shape</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/LAAS_PRIMARY</item>
+        <item name="colorPrimaryDark">@color/LAAS_PRIMARY_DARK</item>
+        <item name="colorAccent">@color/LAAS_ACCENT</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme_Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/LAAS_ACCENT</item>
     </style>
 
 </resources>
