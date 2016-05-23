@@ -100,18 +100,21 @@ public class SelectOrderActivity extends BaseDrawerActivity implements HTTPRespo
                     Intent intent = new Intent(SelectOrderActivity.this, SelectiveActivity.class);
                     intent.putExtra("tid", jsonObject.getString("_id"));
                     startActivity(intent);
+                    
                     break;
                 }
                 case 1 : {
                     Intent intent = new Intent(SelectOrderActivity.this, CommonOrder.class);
                     intent.putExtra("tid", jsonObject.getString("_id"));
                     startActivity(intent);
+
                     break;
                 }
                 case 2 : {
                     Intent intent = new Intent(SelectOrderActivity.this, BulkActivity.class);
                     intent.putExtra("tid", jsonObject.getString("_id"));
                     startActivity(intent);
+
                     break;
                 }
             }
