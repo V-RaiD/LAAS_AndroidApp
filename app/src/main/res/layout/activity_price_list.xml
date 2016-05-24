@@ -1,26 +1,257 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- MAIN CONTENT-->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/LAAS_WHITE"
     tools:context="com.benutzer.washbayin.activities.PriceListActivity">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/pl_toolbar_layout">
+        <include
+            android:id="@+id/pl_toolbar"
+            layout="@layout/toolbar"/>
+    </LinearLayout>
 
-
-    <HorizontalScrollView
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/selectOrderCardId"
+        android:layout_below="@+id/pl_toolbar_layout">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_washbay_white_iconsmachine"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imageViewSelectOneId"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearSelectOneId"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1SelectOneId"
+                android:text="Wash and Fold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2SelectOneId"
+                android:layout_gravity="center"
+                android:text="classic - 7 super - 13 ultra - 18"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/selectOrderCardIdTwo"
+        android:layout_below="@+id/selectOrderCardId">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_packaging"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imageViewSelectTwoId"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearSelectTwoId"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1SelectTwoId"
+                android:text="Wash and Iron"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2SelectTwoId"
+                android:layout_gravity="center"
+                android:text="classic - 12 super - 18 ultra - 23"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/selectOrderCardIdThree"
+        android:layout_below="@+id/selectOrderCardIdTwo">
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/icon_washbay_white_iconsiron"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imageViewSelectFourId"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearSelectFourId"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1SelectFourId"
+                android:text="Iron"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2SelectFourId"
+                android:layout_gravity="center"
+                android:text="Total - 5"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/selectOrderCardIdFour"
+        android:layout_below="@+id/selectOrderCardIdThree">
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/icon_dryclean"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/imageViewSelectThreeId"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearSelectThreeId"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1SelectThreeId"
+                android:text="Dry Clean"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2SelectThreeId"
+                android:layout_gravity="center"
+                android:text="Total - 20"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape"
+        android:id="@+id/nextingLabelHome">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextingTextSelect"
+            android:text="Common PriceList"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/LAAS_ACCENT"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"/>
+    </LinearLayout>
+
+</RelativeLayout>
+    <!-- DRAWER CONTENTd-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/horizontalScrollView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
-        <ScrollView
+        android:layout_gravity="start">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/shape"
+                android:id="@+id/drawerFragment">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/icon_about"/>
+            </LinearLayout>
             <ListView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/listViewPricePage"
-                ></ListView>
-        </ScrollView>
-    </HorizontalScrollView>
-</RelativeLayout>
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/drawerFragment"
+                android:id="@+id/drawerList"></ListView>
+        </RelativeLayout>
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

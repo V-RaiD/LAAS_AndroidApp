@@ -17,8 +17,8 @@ public class DrawerListAdapter extends ArrayAdapter{
     private ImageView imageView;
     private TextView textView;
 
-    public DrawerListAdapter(Context context, int resource) {
-        super(context, resource);
+    public DrawerListAdapter(Context context, String[] resource) {
+        super(context, R.layout.custom_drawer_list, resource);
     }
 
     @Override
@@ -68,7 +68,7 @@ public class DrawerListAdapter extends ArrayAdapter{
             }
             case 6:{
                 imageView.setImageResource(R.drawable.icon_feedback);
-                textView.setText("Feedback");
+                textView.setText("Logout");
                 break;
             }
         }

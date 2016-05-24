@@ -1,3 +1,9 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- MAIN CONTENT-->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -27,12 +33,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/plusLinear1CommonOrderid"
-            android:layout_gravity="center_vertical"
-            android:text="+"
-            android:textSize="50sp"
+            android:layout_gravity="center|center_vertical"
+            android:text="Wash and Fold"
+            android:layout_weight="2"
+            android:textColor="@color/LAAS_ACCENT"
+            android:textSize="20sp"
             android:layout_marginLeft="30dp"
             />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/LAAS_WHITE"
+            android:id="@+id/commonOrderEditId1"
+            android:inputType="number"
+            android:hint="in Kg"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,26 +56,29 @@
         android:layout_margin="5dp"
         android:elevation="3dp"
         android:orientation="horizontal"
+        android:inputType="number"
         android:layout_below="@+id/commonOrderLinear1id"
         android:id="@+id/commonOrderLinear2id"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/plusLinear2CommonOrderid"
-            android:layout_gravity="center_vertical"
-            android:text="+"
-            android:textSize="50sp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_weight="2"
+            android:text="Wash and Iron"
+            android:textColor="@color/LAAS_ACCENT"
+            android:textSize="20sp"
             android:layout_marginLeft="30dp"
             />
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:text="-"
-            android:textSize="50sp"
-            android:layout_marginLeft="30dp"
-            />
+            android:background="@color/LAAS_WHITE"
+            android:id="@+id/commonOrderEditId2"
+            android:inputType="number"
+            android:hint="in Kg"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,15 +89,27 @@
         android:layout_below="@+id/commonOrderLinear2id"
         android:id="@+id/commonOrderLinear3id"
         >
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/plusLinear3CommonOrderid"
-            android:layout_gravity="center_vertical"
-            android:text="+"
-            android:textSize="50sp"
+            android:layout_gravity="center|center_vertical"
+            android:text="Iron"
+            android:textColor="@color/LAAS_ACCENT"
+            android:layout_weight="2"
+            android:textSize="20sp"
             android:layout_marginLeft="30dp"
             />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/LAAS_WHITE"
+            android:id="@+id/commonOrderEditId3"
+            android:inputType="number"
+            android:hint="in Kg"
+            android:layout_marginLeft="90dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,43 +123,54 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/plusLinear4CommonOrderid"
-            android:layout_gravity="center_vertical"
-            android:text="+"
-            android:textSize="50sp"
+            android:layout_gravity="center|center_vertical"
+            android:text="Dry Clean"
+            android:textColor="@color/LAAS_ACCENT"
+            android:layout_weight="2"
+            android:textSize="20sp"
             android:layout_marginLeft="30dp"
             />
+       <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_gravity="center_vertical"
+           android:background="@color/LAAS_WHITE"
+           android:id="@+id/commonOrderEditId4"
+           android:inputType="number"
+           android:hint="in Kg"
+           android:layout_marginLeft="50dp"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_margin="5dp"
         android:elevation="3dp"
-        android:orientation="horizontal"
         android:layout_below="@+id/commonOrderLinear4id"
-        android:id="@+id/commonOrderLinear5id"
+        android:layout_above="@+id/nextingLabelCommon"
+        android:id="@+id/commonOrderRelative5id"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/plusLinear5CommonOrderid"
-            android:layout_gravity="center_vertical"
-            android:text="+"
-            android:textSize="50sp"
-            android:layout_marginLeft="30dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textColor="@color/LAAS_ACCENT"
+            android:text="Choose Wash Details"
+            android:textSize="25sp"
             />
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:layout_alignParentBottom="true"
         android:background="@drawable/shape"
-        android:id="@+id/nextingLabelHome">
+        android:id="@+id/nextingLabelCommon">
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/nextingTextHome"
+            android:id="@+id/nextingTextCOmmon"
             android:text="@string/nextingTextHome"
             android:layout_gravity="center_vertical"
             android:textAlignment="center"
@@ -137,9 +179,34 @@
             android:gravity="center"
             android:fontFamily="sans-serif-condensed"/>
     </LinearLayout>
-
-
-
-
-
 </RelativeLayout>
+    <!-- DRAWER CONTENTd-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/shape"
+                android:id="@+id/drawerFragment">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/icon_about"/>
+            </LinearLayout>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/drawerFragment"
+                android:id="@+id/drawerList"></ListView>
+        </RelativeLayout>
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

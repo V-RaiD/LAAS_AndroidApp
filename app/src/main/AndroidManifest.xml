@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -64,6 +63,18 @@
         <activity
             android:name=".activities.BulkActivity"
             android:label="@string/title_activity_bulk" >
+        </activity>
+        <activity
+            android:name=".activities.AddressActivity"
+            android:label="@string/title_activity_address" >
+        </activity>
+        <activity
+            android:name=".activities.BucketActivity"
+            android:label="@string/title_activity_bucket" >
+        </activity>
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/title_activity_about" >
         </activity>
     </application>
 
