@@ -1,29 +1,24 @@
 package com.benutzer.washbayin.activities;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.benutzer.washbayin.BaseDrawerActivity;
 import com.benutzer.washbayin.R;
 
-public class PriceListActivity extends BaseDrawerActivity {
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_price_list);
-        super.onCreateDrawer();
-        Toolbar _plToolbar = (Toolbar) findViewById(R.id.pl_toolbar);
-        setSupportActionBar(_plToolbar);
+        setContentView(R.layout.activity_about);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_price_list, menu);
+        getMenuInflater().inflate(R.menu.menu_about, menu);
         return true;
     }
 

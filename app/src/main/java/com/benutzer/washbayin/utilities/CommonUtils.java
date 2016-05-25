@@ -64,6 +64,15 @@ public class CommonUtils implements HTTPResponseInterface{
         }
     }
 
+    public void delSessionTok(){
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        System.out.println(sharedPreferences.getString(context.getString(R.string.shared_pref_at), null));
+
+        if(sharedPreferences.contains(context.getString(R.string.shared_pref_at)))
+            sharedPreferences.edit().remove(context.getString(R.string.shared_pref_at));
+
+
+    }
     public String getSessionToken(){
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         System.out.println(sharedPreferences.getString(context.getString(R.string.shared_pref_at), null));

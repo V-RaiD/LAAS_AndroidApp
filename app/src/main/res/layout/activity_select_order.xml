@@ -28,7 +28,7 @@
             android:layout_height="128dp"
             android:orientation="horizontal"
             android:layout_margin="10dp"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:id="@+id/selectOrderCardId"
             android:layout_below="@+id/select_order_toolbar_layout">
 
@@ -74,7 +74,7 @@
             android:layout_height="128dp"
             android:orientation="horizontal"
             android:layout_margin="10dp"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:id="@+id/selectOrderCardIdTwo"
             android:layout_below="@+id/selectOrderCardId">
 
@@ -120,7 +120,7 @@
             android:layout_height="128dp"
             android:orientation="horizontal"
             android:layout_margin="10dp"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:id="@+id/selectOrderCardIdThree"
             android:layout_below="@+id/selectOrderCardIdTwo">
 
@@ -188,23 +188,27 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start">
-        <!--<LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/shape"
-            android:id="@+id/drawerFragment">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                android:src="@drawable/icon_about"/>
-        </LinearLayout>-->
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/drawerList"></ListView>
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/shape"
+                android:id="@+id/drawerFragment">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/icon_about"/>
+            </LinearLayout>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/drawerFragment"
+                android:id="@+id/drawerList"></ListView>
+        </RelativeLayout>
 
     </android.support.design.widget.NavigationView>
-
 </android.support.v4.widget.DrawerLayout>

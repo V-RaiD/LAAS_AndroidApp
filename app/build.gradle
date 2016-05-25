@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.benutzer.washbayin"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -19,8 +19,8 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //buildConfigField "String", WB_LAAS_SERVER, "\"http://54.169.72.255:9135\""
-            buildConfigField "String", WB_LAAS_ADDRESS, "\"http://192.168.1.3:9135\""
+            buildConfigField "String", WB_LAAS_ADDRESS, "\"http://54.169.72.255:9135\""
+            //buildConfigField "String", WB_LAAS_ADDRESS, "\"http://192.168.1.3:9135\""
             buildConfigField "String", WB_API_PROTOCOL, "\"http://\""
             buildConfigField "String", WB_API_PORT, "\":9135\""
         }

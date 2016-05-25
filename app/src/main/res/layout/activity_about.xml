@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/shape"
+    tools:context="com.benutzer.washbayin.activities.AboutActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/headAbout"
+        android:src="@drawable/icon_washbay_white_title"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headAbout"
+        android:id="@+id/headAbout0"
+        android:src="@drawable/icon_washbay_white_splashtag"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headAbout0"
+        android:layout_marginTop="30dp"
+        android:id="@+id/headAbout2"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textColor="@color/LAAS_ACCENT"
+        android:layout_centerHorizontal="true"
+        android:text="Developed by - Team Benutzer"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headAbout3"
+        android:layout_below="@+id/headAbout2"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/LAAS_ACCENT"
+        android:text="Batch of 2016"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headAbout3"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/LAAS_ACCENT"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:text="The NorthCap University"/>
+
+</RelativeLayout>

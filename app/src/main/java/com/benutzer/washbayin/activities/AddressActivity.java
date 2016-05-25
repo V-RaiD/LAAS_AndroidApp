@@ -1,7 +1,7 @@
 package com.benutzer.washbayin.activities;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,21 +9,21 @@ import android.view.MenuItem;
 import com.benutzer.washbayin.BaseDrawerActivity;
 import com.benutzer.washbayin.R;
 
-public class PriceListActivity extends BaseDrawerActivity {
+public class AddressActivity extends BaseDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_price_list);
+        setContentView(R.layout.activity_address);
         super.onCreateDrawer();
-        Toolbar _plToolbar = (Toolbar) findViewById(R.id.pl_toolbar);
-        setSupportActionBar(_plToolbar);
+        Toolbar _addressToolbar = (Toolbar) findViewById(R.id.address_toolbar);
+        setSupportActionBar(_addressToolbar);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_price_list, menu);
+        getMenuInflater().inflate(R.menu.menu_address, menu);
         return true;
     }
 

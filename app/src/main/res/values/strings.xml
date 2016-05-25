@@ -40,4 +40,7 @@
     <string name="title_activity_common_order">CommonOrder</string>
     <string name="title_activity_selective">SelectiveActivity</string>
     <string name="title_activity_bulk">BulkActivity</string>
+    <string name="title_activity_address">AddressActivity</string>
+    <string name="title_activity_bucket">BucketActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>
